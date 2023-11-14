@@ -18,7 +18,8 @@ WORKDIR /opt/tomcat
 EXPOSE 8080
 
 # Copia archivo war al directorio de tomcat
-COPY SimpleJSPApp.war /opt/tomcat/webapps/
+COPY SimpleJSPApp.war /usr/local/tomcat/webapps/SimpleJSPApp.war
+#COPY SimpleJSPApp.war /opt/tomcat/webapps/
 
 # Comando iniciar Tomcat
 CMD ["bin/catalina.sh", "run"]
