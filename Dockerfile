@@ -16,6 +16,8 @@ WORKDIR /opt/tomcat
 # Informamos puerto usado
 EXPOSE 8080
 
+# Copia archivo war al directorio de tomcat
+COPY SimpleJSPApp.war /opt/tomcat/webapps/
 
 # Comando iniciar Tomcat
 CMD ["bin/catalina.sh", "run"]
