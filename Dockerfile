@@ -6,7 +6,7 @@ ENV TOMCAT_VERSION 10.0.8
 
 # Descarga e instalació de tomcat
 RUN wget https://archive.apache.org/dist/tomcat/tomcat-10/v10.0.8/bin/apache-tomcat-10.0.8.tar.gz  && \ 
-	tar -xzf tomcat-10/v10.0.8/bin/apache-tomcat-10.0.8.tar.gz -C /opt && \
+	tar -xzf apache-tomcat-10.0.8.tar.gz -C /opt && \
 	ln -s /opt/apache-tomcat-10.0.8 /opt/tomcat && \
 	rm apache-tomcat-10.0.8.tar.gz
 
