@@ -1,5 +1,4 @@
-tomcat:9-jre8-alpine
-
+tomcat:9.0.82-jdk8-corretto-al2
 
 ADD SimpleJSPApp.war /usr/local/tomcat/webapps/
 
