@@ -1,5 +1,5 @@
-FROM tomcat:9.0.82-jdk8-corretto-al2
-
+# FROM tomcat:9.0.82-jdk8-corretto-al2
+FROM tomcat:10.0.22-jdk8-corretto-al2
 # Crear un directorio temporal
 RUN mkdir -p /tmp/SimpleJSPApp
 
