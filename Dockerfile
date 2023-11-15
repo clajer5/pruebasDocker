@@ -20,7 +20,7 @@ RUN mkdir -p /usr/local/tomcat/conf/Catalina/localhost
 COPY SimpleJSPApp.war /tmp/SimpleJSPApp/
 
 # Descomprimir el archivo WAR
-RUN unzip /tmp/SimpleJSPApp/SimpleJSPApp.war -d /usr/local/tomcat/webapps/SimpleJSPApp
+RUN tar -xf /tmp/SimpleJSPApp/SimpleJSPApp.war -C /usr/local/tomcat/webapps/SimpleJSPApp
 
 # Exponer el puerto 8080
 EXPOSE 8080
