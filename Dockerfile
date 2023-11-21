@@ -11,7 +11,7 @@ ENV DB_PASSWORD=user
 ENV DB_NAME=usuarios
 
 # Crear un directorio temporal
-RUN mkdir -p /tmp/SimpleJSPApp
+#RUN mkdir -p /tmp/SimpleJSPApp
 
 # Copiar el archivo WAR al directorio temporal
 # COPY SimpleJSPApp.war /tmp/SimpleJSPApp/
@@ -21,8 +21,10 @@ RUN mkdir -p /tmp/SimpleJSPApp
 #    cd /usr/local/tomcat/webapps/ROOT && \
 #    jar -xf /tmp/SimpleJSPApp/SimpleJSPApp.war
 
-RUN mkdir -p /usr/local/tomcat/webapps/ROOT
-COPY SimpleJSPApp.war /usr/local/tomcat/webapps/ROOT/
+RUN rm -rf /usr/local/webapps/*
+
+COPY SimpleJSPApp.war /usr/local/tomcat/webapps/ROOT.war
+
 # Exponer el puerto 8080
 EXPOSE 8080
 
