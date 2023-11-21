@@ -1,6 +1,7 @@
 # FROM tomcat:9.0.82-jdk8-corretto-al2
 # FROM tomcat:10.0.22-jdk8-corretto-al2
-FROM tomcat:9.0.71-jdk8-corretto-al2
+# FROM tomcat:9.0.71-jdk8-corretto-al2
+FROM tomcat:9.0.83-jre8
 
 # Variables de entorno
 ENV DB_HOST=mysql
