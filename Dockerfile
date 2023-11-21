@@ -14,13 +14,15 @@ ENV DB_NAME=usuarios
 RUN mkdir -p /tmp/SimpleJSPApp
 
 # Copiar el archivo WAR al directorio temporal
-COPY SimpleJSPApp.war /tmp/SimpleJSPApp/
+# COPY SimpleJSPApp.war /tmp/SimpleJSPApp/
 
 # Descomprimir el archivo WAR con jar
-RUN mkdir -p /usr/local/tomcat/webapps/ROOT && \
-    cd /usr/local/tomcat/webapps/ROOT && \
-    jar -xf /tmp/SimpleJSPApp/SimpleJSPApp.war
+# RUN mkdir -p /usr/local/tomcat/webapps/ROOT && \
+#    cd /usr/local/tomcat/webapps/ROOT && \
+#    jar -xf /tmp/SimpleJSPApp/SimpleJSPApp.war
 
+RUN mkdir -p /usr/local/tomcat/webapps/ROOT
+COPY SimpleJSPApp.war /usr/local/tomcat/webapps/ROOT/
 # Exponer el puerto 8080
 EXPOSE 8080
 
